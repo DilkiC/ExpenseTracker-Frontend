@@ -143,32 +143,34 @@ const styles = StyleSheet.create({
     
     btn: {
         alignSelf:'center',
-        backgroundColor: "#fd79a8",
+        backgroundColor: "#4cd137",
         padding:10,
         marginTop:10,
         marginBottom:20,
         width:200
       },
       btnTxt:{
-        marginLeft:65
+        marginLeft:65,
+        color:'white'
       },
       header:{
-        backgroundColor:"#fd79a8",
+        backgroundColor:"#4cd137",
         marginBottom:30
         
       },
       headerTxt:{
         alignSelf:'center',
         fontSize:20,
-       backgroundColor:'#e84393',
+       //backgroundColor:'#e84393',
         fontWeight:'bold',
-        fontStyle:'italic',
+        //fontStyle:'italic',
         paddingLeft:60,
         paddingRight:60,
+        color:'white'
       },
       pgeTit:{
           alignSelf:'center',
-          color:'#e84393',
+          color:'#4cd137',
           marginTop:20,
          // marginBottom:5,
           fontSize:20,
@@ -210,7 +212,7 @@ const styles = StyleSheet.create({
         
     },
     footer: {
-        backgroundColor: "#ff7675",
+        backgroundColor: "#4cd137",
         marginTop:10
     },
     footerTxt:{

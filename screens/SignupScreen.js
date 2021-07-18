@@ -16,7 +16,7 @@ export default class SignupScreen extends Component {
 
   saveCustomer = () => {
     console.log('dilki');
-     fetch('http://192.168.1.4:3000/user/addUser', {
+     fetch('http://192.168.1.5:3000/user/addUser', {
         method: 'POST',
         body: JSON.stringify({
             nic: this.state.nic,
@@ -150,39 +150,42 @@ const styles = StyleSheet.create({
     
   btn: {
       alignSelf:'center',
-      backgroundColor: "#fd79a8",
+      backgroundColor: "#4cd137",
+      
       padding:10,
       marginTop:20,
       marginBottom:5,
       width:200
     },
     btnTxt:{
+      color:'white',
       marginLeft:65
     },
     header:{
-      backgroundColor:"#fd79a8",
+      backgroundColor:"#4cd137",
       marginBottom:30
       
     },
     headerTxt:{
       alignSelf:'center',
       fontSize:20,
-     backgroundColor:'#e84393',
+     //backgroundColor:'#e84393',
       fontWeight:'bold',
-      fontStyle:'italic',
+      //fontStyle:'italic',
       paddingLeft:60,
       paddingRight:60,
+      color:'white'
     },
     pgeTit:{
       alignSelf:'center',
-      color:'#e84393',
+      color:'#4cd137',
       marginTop:20,
       marginBottom:30,
       fontSize:20,
       fontWeight:'bold'
   },
   input:{
-    borderColor:'#e84393' ,
+    borderColor:'#4cd137' ,
     width:300,
     alignSelf:'center',
     marginTop:20,

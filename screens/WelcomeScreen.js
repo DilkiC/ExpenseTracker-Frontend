@@ -13,7 +13,7 @@ export default class WelcomeScreen extends Component {
   }
 
   backAction = () => {
-    Alert.alert("Hold on!", "Are you sure you want exit?", [
+    Alert.alert("Hold on!", "Are you sure you want exit from RichCash?", [
       {
         text: "Cancel",
         onPress: () => null,
@@ -82,45 +82,47 @@ const styles = StyleSheet.create({
         backgroundColor:"white"
     },
     childFlex1:{
-        flex: 1,
-        backgroundColor:"#fd79a8"
+        //flex: 1,
+        //backgroundColor:"#fd79a8"
         //backgroundColor:"black"
     },
     childFlex2:{
-        flex: 2,
+        //flex: 2,
         //backgroundColor:"#bdc3c7"
-        backgroundColor:'black'
+        //backgroundColor:'black'
 
     },
     childText:{
         alignSelf:'center',
         fontSize:30,
         marginTop:50,
+        color:'#4cd137',
+        paddingTop:200,
         //backgroundColor:'#e84393',
-        backgroundColor:'#e84393',
+        //backgroundColor:'#e84393',
         fontWeight:'bold',
-        fontStyle:'italic',
-        paddingLeft:60,
-        paddingRight:60
+        //fontStyle:'italic',
+        
 
     },
     btnLogin: {
         alignSelf:'center',
-        backgroundColor: "#e84393",
+        backgroundColor: "#4cd137",
         padding:10,
-        marginTop:100,
+        marginTop:50,
         width:200
       },
       btnExit: {
         alignSelf:'center',
-        backgroundColor: "#e84393",
+        backgroundColor: "#4cd137",
         padding:10,
-        marginTop:50,
+        marginTop:20,
         width:200
         
       },
       btnTxt:{
-        marginLeft:65
+        marginLeft:65,
+        color:'white'
       },
       screenColor:{
         backgroundColor:'black'

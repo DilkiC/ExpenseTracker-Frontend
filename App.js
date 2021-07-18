@@ -5,8 +5,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 
-
-
 import WelcomeScreen from './screens/WelcomeScreen';
 import LoginScreen from './screens/LoginScreen';
 import SignupScreen from './screens/SignupScreen';
@@ -14,6 +12,7 @@ import HomeScreen from './screens/HomeScreen';
 import AddExpenseScreen from './screens/AddExpenseScreen';
 import HistoryScreen from './screens/HistoryScreen';
 import MonthlyViewScreen from './screens/MonthlyViewScreen';
+import FirstScreen from './screens/FirstScreen';
 
 
 const Stack = createStackNavigator();
@@ -32,6 +31,9 @@ export default class App extends Component {
       
      <NavigationContainer>
        <Stack.Navigator>
+
+       <Stack.Screen name="FirstScreen" component={FirstScreen} options={{ headerShown: false }}/>
+
         <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} options={{ headerShown: false }} /> 
        <Stack.Screen name="LoginScreen" component={LoginScreen} options={{ headerShown: false }} />
        <Stack.Screen name="SignupScreen" component={SignupScreen} options={{ headerShown: false }} />

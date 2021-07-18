@@ -26,7 +26,7 @@ export default class MonthlyViewScreen extends Component {
 }
 
 getUser = () => {
-  fetch('http://192.168.1.4:3000/user/getOneUser/' + this.state.nic, { method: 'GET' })
+  fetch('http://192.168.1.5:3000/user/getOneUser/' + this.state.nic, { method: 'GET' })
       .then((response) => response.json())
       .then((json) => console.log(json))
 
@@ -60,32 +60,34 @@ const styles = StyleSheet.create({
     
   btn: {
       alignSelf:'center',
-      backgroundColor: "#fd79a8",
+      backgroundColor: "#4cd137",
       padding:10,
       marginTop:10,
       marginBottom:250,
       width:200
     },
     btnTxt:{
-      marginLeft:65
+      marginLeft:65,
+      color:'white'
     },
     header:{
-      backgroundColor:"#fd79a8",
+      backgroundColor:"#4cd137",
       marginBottom:30
       
     },
     headerTxt:{
       alignSelf:'center',
       fontSize:20,
-     backgroundColor:'#e84393',
+     //backgroundColor:'#e84393',
       fontWeight:'bold',
-      fontStyle:'italic',
+      //fontStyle:'italic',
       paddingLeft:60,
       paddingRight:60,
+      color:'white'
     },
     pgeTit:{
         alignSelf:'center',
-        color:'#e84393',
+        color:'#4cd137',
         marginTop:20,
        // marginBottom:5,
         fontSize:20,

@@ -14,23 +14,23 @@ export default class AddExpenseScreen extends Component {
       type:'',
       value:'',
       date:'',
-      balance:''
-     /*  displayname1:'',
-      displayname2:'' */
+      balance:'',
+      displayname1:'',
+      displayname2:''
       
     }
     this.getData()
-    //this.doRefresh()
+    this.doRefresh()
   }
 
-  /* doRefresh=()=>{
+  doRefresh=()=>{
     const { nic } = this.props.route.params
     this.getExpense(nic)
     this.getIncome(nic)
 }
 
 getIncome(nic) {
-  fetch('http://192.168.1.4:3000/trans/incexpenses/' + nic, { method: 'GET' })
+  fetch('http://192.168.1.5:3000/trans/incexpenses/' + nic, { method: 'GET' })
       .then((response) => response.json())
       .then((json) => this.setState({
           displayname1: (json[0].total)
@@ -38,13 +38,13 @@ getIncome(nic) {
 
 }
 getExpense(nic) {
-  fetch('http://192.168.1.4:3000/trans/exexpenses/' + nic, { method: 'GET' })
+  fetch('http://192.168.1.5:3000/trans/exexpenses/' + nic, { method: 'GET' })
       .then((response) => response.json())
       .then((json) => this.setState({
           displayname2: (json[0].total)
       }))
 
-} */
+}
 
   getData = async () => {
     try {
@@ -60,7 +60,7 @@ getExpense(nic) {
 }
 
 getUser = () => {
-  fetch('http://192.168.1.4:3000/user/getOneUser/' + this.state.nic, { method: 'GET' })
+  fetch('http://192.168.1.5:3000/user/getOneUser/' + this.state.nic, { method: 'GET' })
       .then((response) => response.json())
       .then((json) => console.log(json))
 
@@ -97,7 +97,7 @@ chechBoxTwoPress = () => {
 
   AddRecord = () => {
 
-    fetch('http://192.168.1.4:3000/trans/addTrans', {
+    fetch('http://192.168.1.5:3000/trans/addTrans', {
     method: 'POST',
     body: JSON.stringify({
                   nic: this.state.nic,
@@ -145,14 +145,7 @@ chechBoxTwoPress = () => {
     })
   }
 
-  /* totalBalance(){
-    const balance=this.state.balance;
-    
-    if(chechBoxOne){
-        
-    }
-
-  } */
+  
 
   render() {
     const { nic } = this.props.route.params
@@ -186,7 +179,7 @@ chechBoxTwoPress = () => {
 
              </Card> */}
 
-                {/* <Body style={styles.Body1}>
+                <Body style={styles.Body1}>
                         <Text>Income </Text>
                         <Text style={styles.TextSize}>Rs :{this.state.displayname2} </Text>
                     </Body>
@@ -194,7 +187,7 @@ chechBoxTwoPress = () => {
                     <Body style={styles.Body2}>
                         <Text>Expense </Text>
                         <Text style={styles.TextSize}>Rs :{this.state.displayname1} </Text>
-                    </Body> */}
+                    </Body>
 
 
 
@@ -298,7 +291,7 @@ const styles = StyleSheet.create({
     
   btn: {
       alignSelf:'center',
-      backgroundColor: "#fd79a8",
+      backgroundColor: "#4cd137",
       padding:10,
       marginTop:10,
       marginBottom:10,
@@ -306,31 +299,33 @@ const styles = StyleSheet.create({
     },
     addBtn:{
       alignSelf:'center',
-      backgroundColor: "#fd79a8",
+      backgroundColor: "#4cd137",
       padding:10,
       width:200,
       marginTop:20,
     },
     btnTxt:{
-      marginLeft:65
+      marginLeft:65,
+      color:'white'
     },
     header:{
-      backgroundColor:"#fd79a8",
+      backgroundColor:"#4cd137",
       marginBottom:30
       
     },
     headerTxt:{
       alignSelf:'center',
       fontSize:20,
-     backgroundColor:'#e84393',
+     //backgroundColor:'#e84393',
       fontWeight:'bold',
-      fontStyle:'italic',
+      //fontStyle:'italic',
       paddingLeft:60,
       paddingRight:60,
+      color:'white'
     },
     pgeTit:{
         alignSelf:'center',
-        color:'#e84393',
+        color:'#4cd137',
         marginTop:20,
         marginBottom:20,
         fontSize:20,
@@ -342,7 +337,7 @@ const styles = StyleSheet.create({
     paddingBottom: 0
   },
   input:{
-    borderColor:'#e84393' ,
+    borderColor:'#4cd137' ,
     width:300,
     alignSelf:'center',
     marginTop:10,
